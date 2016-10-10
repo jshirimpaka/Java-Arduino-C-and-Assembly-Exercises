@@ -42,7 +42,7 @@ public class PrintStreamPanel extends JPanel {
 		textField.setColumns(15);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(6, 25, width, 175);
+		scrollPane.setBounds(6, 25, 10*width, 10*175);
 		add(scrollPane);
 		
 		textArea = new JTextArea();

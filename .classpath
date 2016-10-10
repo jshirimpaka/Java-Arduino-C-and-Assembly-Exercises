@@ -2,7 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="assignments"/>
 	<classpathentry kind="src" path="studios"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="D:/cse132/cse132-fl16-shirimpaka.jean/studios/studio4"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="jars/jars/RXTXcomm.jar">
 		<attributes>
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="CSE132-shirimpaka.jean/jars/jars"/>

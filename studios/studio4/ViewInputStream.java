@@ -14,11 +14,17 @@ public class ViewInputStream extends FilterInputStream {
         ps = psp.getPrintStream(); 
     }
 
-    public int read() {
+    public int read() throws IOException {
+		
         // TODO
         // use super.read() to access the next byte from the InputStream
         // also, you can use ps like System.out to print to the new window
-
+    	
+    	int x=super.read();
+    	//String hexX = Integer.toHexString(x);
+    	ps.println(x);
+    	
+    	return x;
     }
 
 }
