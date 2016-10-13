@@ -54,6 +54,10 @@ public class MsgReceiver {
 							 System.out.println(": Debug message");
 
 						     break;
+						     
+						case 0x31:
+							System.out.println("Alarm");
+							break;
                          
 						case 0x32:
 							
@@ -108,6 +112,9 @@ public class MsgReceiver {
                             System.out.println(filtTemp/10+ ": degree C, filted temp");
 							
 							break;
+							
+                       
+                        	
 						}
 					}
 				}

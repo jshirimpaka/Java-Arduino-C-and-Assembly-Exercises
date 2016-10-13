@@ -63,12 +63,16 @@ void loop() {
     potVal = analogRead(POT_PIN);
     Serial.write(potVal>>8); 
     Serial.write(potVal>>0);
-
+    if(potVal>600){
+      keys=0x31;
+      Serial.write(magicN);
+      Serial.write(keys);
+    }
     Serial.write(magicN);
     keys=0x34;
     Serial.write(keys);
     rawVal = analogRead(SENSOR_PIN);
-    voltge=(rawVal*500.0)/1024.0;
+    voltge=(rawVal*500.0)/1024.0;//in mV
     Serial.write(rawVal>>8); 
     Serial.write(rawVal>>0);
 
@@ -78,7 +82,7 @@ void loop() {
     convTemp=voltge/10.0;
     Serial.println(convTemp);
     
-    Serial.print(convTemp*16777216); 
+    Serial.print(convTemp*16777216); //shit by 24
     Serial.print(convTemp*65536);
     Serial.print(convTemp*256); 
     Serial.print(convTemp*1);
