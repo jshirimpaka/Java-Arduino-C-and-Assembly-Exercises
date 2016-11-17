@@ -6,9 +6,20 @@
 
 .global giveMeMax
 giveMeMax:
-  ldi r24, 1 // Load the value 1 into register 24
+  //printRegs
+  ldi r24, 255 // Load the value 1 into register 24
+  //printRegs
   ret
+.global giveMeZero
+giveMeZero:
+   ldi r24,0
+   
+    ret
 
+.global addFour
+ addFour:
+   ldi r24,4
+   ret
  // Define further "functions" below:
  // .global functionName
  // functionName:

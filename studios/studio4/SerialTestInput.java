@@ -26,7 +26,7 @@ public class SerialTestInput {
              }
             
             
-           SerialComm out = new SerialComm();
+          // SerialComm out = new SerialComm();
 //            
 //             try {out.connect("COM3");} catch (Exception e){
 //                    System.out.println("no");
@@ -34,12 +34,14 @@ public class SerialTestInput {
             
              InputStream thing = in.getInputStream();
              
-             ViewInputStream Data=new ViewInputStream(thing);
+            ViewInputStream Data=new ViewInputStream(thing);
 			BufferedInputStream newData=new BufferedInputStream(Data);
 			@SuppressWarnings({ "unused", "resource" })
 			DataInputStream wrapp=new DataInputStream(newData);
              int x = 0;
-             int r = 0;
+             int r= 0;
+             int pot=0;
+             int pot1=0; int pot2=0;
              while (true) {
                     try {x = thing.available();
                     } catch (Exception e) {
@@ -54,7 +56,10 @@ public class SerialTestInput {
                                   System.out.println("");
                            }
                            //System.out.print(r);
-                           System.out.print((char)r);
+                    	        pot1=r<<8;
+    							pot2=r<<0;
+    							pot=pot1+pot2;
+                           System.out.print(pot);
                           
                            /* try {
 							//System.out.println(Data.read());

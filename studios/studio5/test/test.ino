@@ -1,15 +1,18 @@
-/* helloworld
- *
- * output simple hello message
- *
- */
+
 
 void setup() {
+ 
   Serial.begin(9600);
-  
+ 
+  pinMode(13,OUTPUT);
 }
 
 void loop() {
-  Serial.println("Hello, world!");
-  delay(1000);
+  String text = Serial.readString();
+  if(text=="C"){
+    digitalWrite(13,1);
+    delay(1000);
+    digitalWrite(13,0);
+    
+  }
 }

@@ -1,6 +1,12 @@
  package studio5.test;
+ 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 
@@ -11,37 +17,45 @@ public class javaHexTX {
 public static void main(String[] args) {
 	  SerialComm in = new SerialComm();
       
-      
       try {in.connect("COM3");
      
       } catch (Exception e){
              System.out.println("no");
       }
-	@SuppressWarnings("unused")
-	OutputStream thing = in.getOutputStream();
-	@SuppressWarnings("unused")
-	BufferedReader os = new BufferedReader(new InputStreamReader(System.in));
+      
+      OutputStream thingout = in.getOutputStream();
+      BufferedOutputStream newData=new BufferedOutputStream(thingout);
+		@SuppressWarnings({ "unused", "resource" })
+	  DataOutputStream wrapp=new DataOutputStream(newData);
+		
+	
+	//BufferedStream os = new BufferedStream(wrapp);
 	
 	
-		int p = 0;
+		//String myString = "C";
+	
+	Thread thread=new Thread(){
+		@Override public void run() {
+			// wait after connecting, so the bootloader can finish
+			try {Thread.sleep(1000); } catch(Exception e) {
+				
+			}
+			
+		
+	  while(true){
 		try {
-			System.out.println("Type a character");
-			p = System.in.read();
+			wrapp.write(1);
+			wrapp.flush();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			while (p <= 31) {
-				System.out.println("type something");
-				try {
-					p = System.in.read();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-			}
-			System.out.println(p);
-			
-		}
-	
+		
+		
+	    }
+	   }
+	};
+       thread.start();
+
 	}
+}

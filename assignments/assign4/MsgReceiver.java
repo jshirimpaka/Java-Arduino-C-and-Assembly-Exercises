@@ -18,7 +18,7 @@ public class MsgReceiver {
 		// insert code here
 		// read from vis and write to console
 
-		int x = 0;
+		
 		@SuppressWarnings("unused")
 
 		int r = 0;

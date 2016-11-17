@@ -72,38 +72,37 @@ void loop () {
     c =c+1;
   }
 
-  if (button2Press()) {
+  else if (button2Press()) {
     c = c - 1;
   }
-  // TURN OFF ALL THE COLUMS
-  for (int i = 0; i < 5; i++) {
-    digitalWrite(pinCols[i], 1);
-  }
-  // GO THROUGH ALL COLUMS AND TURN ON EACH ONE AT A TIME
-  for (int col = 0; col < 5; col++) {
-
-    digitalWrite(pinCols[col], 0);
-
-    
-    for (int row = 1; row < 8; row++) {
-      for (int j = 0; j < 5; j++) {
-        // TURN OFF ALL OTHER COLUMS EXCEPT THE CURRENT ONE
-        if (j != col) {
-          digitalWrite(pinCols[j], 1);
+  for(int col=0; col<5;col++){
+        for (int row=1; row<8;row++){
+          x = bitRead(font_5x7[c][col], row);
+                  //Serial.print(x);
+                  
+                    
+                        countRow--;
+                      if(countRow==6){
+                        countRow=13;
+                      }
+          //Serial.print(countRow);
+          if(x==1){
+            digitalWrite(countRow,1);
+            digitalWrite(countCol,0);
+            delay(1);
+            digitalWrite(countRow,0);
+            digitalWrite(countCol,1);
+          }
+      
         }
-        digitalWrite(pinCols[j], 0);
+        //Serial.println("");
+        countCol--;
+        if(countCol==1){
+          countCol=6; 
+        }
+        
       }
-      //WRITE THE CURRENT BIT TO THE CURRENT ROW
-      x = bitRead(font_5x7[c][col], row);
-      digitalWrite(pinRows[row - 1], x);
-      Serial.print(x);
-
-      delay(1);
-    }
-
-    
-  }
-
+      
 }
 
 
