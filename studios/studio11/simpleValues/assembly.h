@@ -10,4 +10,5 @@ extern "C" {
   byte giveMeZero(void);
   byte addFour(byte a);
   void turnOnLight(void);
+  boolean hasAOne( int a);
 }

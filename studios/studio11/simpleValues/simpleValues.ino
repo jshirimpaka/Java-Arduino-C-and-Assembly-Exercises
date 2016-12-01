@@ -8,12 +8,16 @@ void setup() {
   byte a = giveMeMax();
   byte b = giveMeZero();
   byte c=addFour(1);
+  boolean t=hasAOne(7);
 
   // Print the results from the assembly functions
   Serial.print("a = ");
   Serial.println(a);
   Serial.print("b = ");
   Serial.println(b);
+  Serial.print("t = ");
+  Serial.println(t);
+  
    Serial.print("c = ");
   Serial.println(c);
 

@@ -6,9 +6,10 @@ byte test(byte a, byte b) {
 }
 
 void setup() {
+  Serial.begin(9600);
   int8_t a,b;  // Signed 8-bit ints
   
-  Serial.begin(9600);
+  
   Serial.println("Starting program...");
 
   Serial.print("Should be true: ");
@@ -31,11 +32,15 @@ void setup() {
   Serial.print("Should be 12: ");
   Serial.println(byteToInt(12));
 
-  a = 122; b = 123;
+
+
+ a = 122; b = 123;
+
   Serial.print("Should be 245: ");  
   Serial.println(addBytes(a, b));
 
   a = 127; b=127;
+  
   Serial.print("Should be 254: ");  
   Serial.println(addBytes(a, b));
 
@@ -43,6 +48,10 @@ void setup() {
   Serial.print("Should be -2: ");   
   Serial.println(addBytes(a, b));
 
+  /* a = 2; b=4;
+  Serial.print("Should be 6: ");   
+  Serial.println(mult(a, b));
+*/
 
   Serial.print("Should be 3: ");
   Serial.println(average(2, 4));
@@ -58,5 +67,6 @@ void setup() {
 
   Serial.println("Ended setup!");
 }
+
 
 void loop() { /* unused */ }

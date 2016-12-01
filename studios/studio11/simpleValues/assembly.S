@@ -4,6 +4,9 @@
 // (or a double slash, like C)
 ; Lines without labels should be indented once.
 
+ 
+ 
+
 .global giveMeMax
 giveMeMax:
   //printRegs
@@ -13,8 +16,7 @@ giveMeMax:
 .global giveMeZero
 giveMeZero:
    ldi r24,0
-   
-    ret
+   ret
 
 .global addFour
  addFour:
@@ -25,3 +27,9 @@ giveMeZero:
  // functionName:
  //   *code*
  //   ret
+
+ .global hasAOne
+  hasAOne:
+   ldi r24,2
+   or r24,r24
+   ret
