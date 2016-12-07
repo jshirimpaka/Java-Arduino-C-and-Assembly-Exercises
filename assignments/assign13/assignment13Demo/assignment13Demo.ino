@@ -1,5 +1,6 @@
 #include "assignment13.h"
 
+
 void setup() {
 
   Serial.begin(9600);
@@ -16,11 +17,11 @@ void setup() {
   Serial.print("Should be 444: ");
   Serial.println(sumArray(c, 10));
 
-  Serial.print("Should be 175: ");
+  Serial.print("Should be 116: ");
   Serial.println(avgArray(b, 3));
 
   Serial.print("Should be 44: ");
-  Serial.println(avgArray(c, 3));
+  Serial.println(avgArray(c, 10));
 
   Serial.print("Should be 3: ");
   Serial.println(divide(21, 7));
@@ -39,4 +40,6 @@ void setup() {
   Serial.println(dot(f, g, 5));
 }
 
-void loop() { /* unused */ }
+void loop() {
+  /* unused */
+}

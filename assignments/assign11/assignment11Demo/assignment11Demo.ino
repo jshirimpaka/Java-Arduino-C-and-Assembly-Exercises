@@ -48,10 +48,10 @@ void setup() {
   Serial.print("Should be -2: ");   
   Serial.println(addBytes(a, b));
 
-  /* a = 2; b=4;
+  a = 2; b=4;
   Serial.print("Should be 6: ");   
   Serial.println(mult(a, b));
-*/
+
 
   Serial.print("Should be 3: ");
   Serial.println(average(2, 4));
@@ -64,6 +64,9 @@ void setup() {
 
   Serial.print("Should be -12: ");
   Serial.println(average(431, 57));
+  byte ar[] = {1, 2, 3};
+  Serial.print("Should be 6: ");
+  Serial.println(sumArray(ar, 3));
 
   Serial.println("Ended setup!");
 }

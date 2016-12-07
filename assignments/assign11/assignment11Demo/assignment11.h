@@ -4,6 +4,7 @@ extern "C" {
   char intToAscii(byte num);
   int byteToInt(byte num);
   int addBytes(byte num1, byte num2);
+  int sumArray(byte a[], byte length);
   int average(byte num1, byte num2);
   int mult(int num1, byte num2);
   int sumArray(byte a[]);
