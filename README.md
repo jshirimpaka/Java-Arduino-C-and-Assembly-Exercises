@@ -4,30 +4,30 @@ In this course, we are introduced to the fundamental concepts in the basic opera
 
 Studios are done collaboratively in a group of two or free people to explore new software and hardware concepts. Assignments are done individually to inhance individual understanding of the topic. Both studios and assignments are done in the following order.
 
-* 1. Information Representation
+* i. Information Representation
 
-* 2. Introduction to Arduino Kit
+* ii. Introduction to Arduino Kit
 
-* 3. Delta Timing Concept
+* iii. Delta Timing Concept
 
-* 4. Java-Arduino Communication
+* iv. Java-Arduino Communication
 
-* 5. Arduino-Java Communication
+* v. Arduino-Java Communication
 
-* 6. Digital Inputs & Multiplexed Outputs
+* vi. Digital Inputs & Multiplexed Outputs
 
-* 7. Review and Exam
+* vii. Review and Exam
 
-* 8. Accelerator Data exploration
+* viii. Accelerator Data exploration
 
-* 9. Data Visualization using Java's StdDraw API
+* ix. Data Visualization using Java's StdDraw API
 
-* 10. Computer Networking Concept
+* x. Computer Networking Concept
 
-* 11. Introduction to Assembly language
+* xi. Introduction to Assembly language
 
-* 12. Thanksgiving Break
+* xii. Thanksgiving Break
 
-* 13. Assembly Program Control
+* xiii. Assembly Program Control
 
 
