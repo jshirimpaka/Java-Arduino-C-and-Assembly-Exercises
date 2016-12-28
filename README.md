@@ -2,7 +2,7 @@
 
 In this course, we are introduced to the fundamental concepts in the basic operation of computers, from microprocessors to servers and we explore the universal similarities between all modern computing problems: how do we represent data? How do we communicate with other computers?
 
-Studios are done collaboratively in a group of two or free people to explore new software and hardware concepts. Assignments are done individually to inhance individual understanding of the topic. Both studios and assignments are done in the following order.
+Studios are done collaboratively in a group of two or free people to explore new software and hardware concepts. Assignments are done individually to inhance individual understanding of the discussed topics. Both studios and assignments are done in the following order.
 
 * i. Information Representation
 
