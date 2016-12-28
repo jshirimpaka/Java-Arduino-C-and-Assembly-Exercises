@@ -20,7 +20,7 @@ Studios are done collaboratively in a group of two or free people to explore new
 
 * viii. Accelerator Data exploration
 
-* ix. Data Visualization using Java's StdDraw API
+* ix. Accelerator Data Visualization using Java's StdDraw API
 
 * x. Computer Networking Concept
 
