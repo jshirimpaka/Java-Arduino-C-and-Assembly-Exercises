@@ -6,7 +6,7 @@ Studios are done collaboratively in a group of two or free people to explore new
 
 * i. Information Representation
 
-* ii. Introduction to Arduino Kit
+* ii. Introduction to microcontrollers using Arduino as an example
 
 * iii. Delta Timing Concept
 
